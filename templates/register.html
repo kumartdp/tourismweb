@@ -1,0 +1,167 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Telangana Tourism</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="form-v10">
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            
+                            <div class="col-xl-8 col-lg-8">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+											<li><h1>TELANGANA TOURISM</h1>
+                                        <li><a class="active" href="{% url 'home' %}" style="margin-left:50px">home</a></li>
+                                           
+                    
+											<li><a  href="{% url 'register' %}" style="margin-left:30px">Report to police</a></li>
+											<li><a  href="{% url 'office' %}" >Office Use</a></li>
+
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                <div class="social_wrap d-flex align-items-center justify-content-end">
+                                    <div class="number">
+                                        <p> <i class="fa fa-phone"></i>+91 9490760870</p>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="register" method="post" id="myform">
+				{% csrf_token %}
+				<div class="form-left">
+					<h2>General Infomation</h2>
+					
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row">
+							<input type="text" name="places" class="input-text" id="places" placeholder="Places Visting" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1" style="margin-left:10px">
+							Date of Visiting
+						</div>
+						<div class="form-row form-row-2">
+							Date of Leaving
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+						<input type="date" name="date_of_visiting" id="dv"   required>
+
+						</div>
+						<div class="form-row form-row-2">
+						<input type="date" name="date_of_leaving" id="dl"   required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row">
+							<input type="text" name="unique" class="street" id="unique" placeholder="Unique Identification card number" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row">
+							<input type="phone" name="tourist" class="input-text" id="unique" placeholder="Tourist guide phno.">
+						</div>
+					</div>
+					
+				</div>
+				<div class="form-right">
+					<h2>Contact Details</h2>
+					<div class="form-row">
+						<input type="text" name="street" class="street" id="street" placeholder="Street + Nr" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="additional" class="additional" id="additional" placeholder="Additional Information" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row">
+							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<select name="country">
+						    <option value="country">Country</option>
+						    <option value="Vietnam">Vietnam</option>
+						    <option value="Malaysia">Malaysia</option>
+						    <option value="India">India</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="code" class="code" id="code" placeholder="Code +" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+					</div>
+					
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Report">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

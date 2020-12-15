@@ -1,0 +1,202 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Telangana Tourism</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            
+                            <div class="col-xl-8 col-lg-8">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+											<li><h1>TELANGANA TOURISM</h1>
+                                        <li><a class="active" href="{% url 'home' %}" style="margin-left:50px">home</a></li>
+                                            <li><a href="#" style="margin-left:20px">places   <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                 
+                                                </ul>
+                                            </li>
+											<li><a  href="{% url 'register' %}" style="margin-left:30px">Report to police</a></li>
+											<li><a  href="{% url 'office' %}" >Office Use</a></li>
+
+                                            
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 d-none d-lg-block">
+                                <div class="social_wrap d-flex align-items-center justify-content-end">
+                                    <div class="number">
+                                        <p> <i class="fa fa-phone"></i>+91 9490760870</p>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+<form action="opt",method='get',id='lan'> 
+	{% csrf_token %}
+<div class="container">
+	<ul class="list">
+		
+<h1>
+	select your language
+</h1>
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="english" />
+			<label for="d-opt" class="label">english</label>
+		</li>
+
+		
+		
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="français" />
+			<label for="d-opt" class="label">français</label>
+		</li>
+
+		
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="Deutsche" />
+			<label for="d-opt" class="label">Deutsche</label>
+		</li>
+
+		
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="hindi" />
+			<label for="d-opt" class="label">हिंदी</label>
+		</li>
+
+
+		
+
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="indonesian" />
+			<label for="d-opt" class="label">indonesian</label>
+		</li>
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="irish" />
+			<label for="d-opt" class="label">irish</label>
+		</li>
+
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="italiano" />
+			<label for="d-opt" class="label">italiano</label>
+		</li>
+
+
+		
+
+
+		
+		
+
+		
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="malayalam" />
+			<label for="d-opt" class="label">malayalam</label>
+		</li>
+
+
+		
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="marathi" />
+			<label for="d-opt" class="label">marathi</label>
+		</li>
+
+
+		
+
+
+		
+
+
+		
+
+		<li class="list__item">
+			<input type="radio" class="radio-btn" name="choice" value="telugu" />
+			<label for="d-opt" class="label">తెలుగు</label>
+		</li>
+		<h1>
+			select your place
+		</h1>
+		</ul>
+		<ul>
+			<li>
+				<input type="radio" name="place" value="hyd"/>
+				<label >hyderabad</label>
+			</li>
+			<li>
+				<input type="radio" name="place" value="war"/>
+				<label >warangal</label>
+			</li>
+			<li>
+				<input type="radio" name="place" value="knr"/>
+				<label >karimnagar</label>
+			</li>
+		</ul>
+
+
+		
+<input type="submit" value="go">
+
+			
+
+	
+</div>
+</form> 
+</body>
+</html>
